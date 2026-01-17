@@ -6,6 +6,8 @@ This guide provides a step-by-step walkthrough for setting up a basic virtual ho
 - A computer running a Linux distribution (this guide uses Ubuntu Desktop).
 - An internet connection.
 
+> **Important Note:** Virtualization software like VirtualBox must be installed on your main desktop operating system (e.g., Windows or Linux Desktop), not inside of a WSL environment. This guide assumes you are running the VirtualBox application directly on your main computer.
+
 ## Part 1: Environment Setup
 
 ### 1. Install VirtualBox
