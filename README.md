@@ -17,11 +17,15 @@ A HomeLab isn't just a server; it's a **Portal** into advanced system administra
 
 ## 🗺️ The Seeker's Roadmap
 
-This blueprint is divided into specialized chapters:
-- **The Foundation**: Setting up **Proxmox** on bare metal.
-- **The Perimeter**: Configuring **pfSense** for network isolation and VLANs.
-- **The Core**: Deploying **Ubuntu Server** and **Nginx** for high-performance hosting.
-- **Secure Links**: Implementing P2P file transfers and secure SSH access.
+This blueprint is divided into specialized chapters for rapid deployment:
+1. **[Chapter 1: The Proxmox Foundation](chapters/chapter1-proxmox-foundation.md)** - Setting up the hypervisor base.
+2. **[Chapter 2: The pfSense Perimeter](chapters/chapter2-pfsense-perimeter.md)** - Building the virtual gatekeeper.
+3. **[Chapter 3: Ubuntu Server Core](chapters/chapter3-ubuntu-server-core.md)** - Hardening the workhorse.
+
+## 🏁 Operational Status
+
+> [!TIP]
+> **Current Status**: All core chapters are live. The lab is ready for infiltration.
 
 ## 📖 The Development Journey
 
