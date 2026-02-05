@@ -8,26 +8,26 @@ Hey there, fellow seeker! I'm **Mwithiga**.
 
 I've always been a tinkerer, driven by a curiosity to understand how the digital world works from the ground up. In Cybersecurity, understanding the infrastructure is just as critical as understanding the exploit. This guide is my documented journey into the world of self-hosting and private server architecture.
 
-## 🛡️ Why Build a HomeLab?
+##  Why Build a HomeLab?
 
 A HomeLab isn't just a server; it's a **Portal** into advanced system administration and security research. 
 - **Isolated Research**: Test tools like **ThreatScope** and **Portal** in a safe, controlled sandbox.
 - **Root-Level Mastery**: Gain experience with hypervisors, networking zones, and server hardening.
 - **Disaster Readiness**: Learn to rebuild from zero with structured, clear documentation.
 
-## 🗺️ The Seeker's Roadmap
+## The Seeker's Roadmap
 
 This blueprint is divided into specialized chapters for rapid deployment:
 1. **[Chapter 1: The Proxmox Foundation](chapters/chapter1-proxmox-foundation.md)** - Setting up the hypervisor base.
 2. **[Chapter 2: The pfSense Perimeter](chapters/chapter2-pfsense-perimeter.md)** - Building the virtual gatekeeper.
 3. **[Chapter 3: Ubuntu Server Core](chapters/chapter3-ubuntu-server-core.md)** - Hardening the workhorse.
 
-## 🏁 Operational Status
+## Operational Status
 
 > [!TIP]
 > **Current Status**: All core chapters are live. The lab is ready for infiltration.
 
-## 📖 The Development Journey
+## The Development Journey
 
 The path to a working homelab was filled with learning experiences. 
 
