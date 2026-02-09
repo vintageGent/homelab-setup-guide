@@ -26,7 +26,7 @@ Before infiltration begins, ensure your host machine meets these requirements:
 - **Storage**: SSD for the OS/Boot and separate HDD/SSD for VM storage.
 - **Network**: Wired Ethernet connection (WiFi is unstable for hypervisors).
 
-## Installation Protocol
+## 🚀 Installation Protocol
 
 ### 1. BIOS Preparation
 - Enter BIOS (usually F2, F12, or DEL).
@@ -49,7 +49,31 @@ Before infiltration begins, ensure your host machine meets these requirements:
    - **IP Address**: Set a static IP (e.g., `192.168.1.100`).
    - **Gateway**: Your router's IP.
 
-## Post-Install Optimization
+---
+
+## Alternative Path: The Virtual Lab (No USB Required)
+
+If you don't have a spare computer or USB, you can use **Oracle VirtualBox**.
+
+Think of this as **building a model skyscraper inside your existing house**.
+Instead of taking over the whole computer (Land), you run the lab as a program on your current Windows/Mac computer.
+
+### Setup Protocol
+1.  **Download & Install**: [Oracle VirtualBox](https://www.virtualbox.org/).
+2.  **Create "The Foundation"**:
+    *   Open VirtualBox -> New.
+    *   Name: `Proxmox-Lab` (or `Ubuntu-Host` if skipping Proxmox).
+    *   Select Type: `Linux`, Version: `Debian (64-bit)`.
+    *   **Memory**: Give it as much as you can spare (e.g., 8192 MB = 8GB).
+    *   **Hard Disk**: Create a virtual disk (at least 50GB).
+3.  **Boot**: Select the ISO file you downloaded (Proxmox or Ubuntu) and click Start.
+
+> [!TIP]
+> **VirtualBox Networking**: When we get to networking, use "Bridged Adapter" mode to let your lab talk to your home WiFi easily.
+
+---
+
+## ⚡ Post-Install Optimization
 
 ### The "No-Subscription" Fix
 By default, Proxmox looks for an enterprise license. We need to point it to the community repository.
@@ -66,9 +90,8 @@ By default, Proxmox looks for an enterprise license. We need to point it to the 
    ```
 5. Update: `apt update && apt dist-upgrade -y`
 
-##  Next Steps
+## 🎯 Next Steps
 With the foundation solid, we move to **Chapter 2: The pfSense Perimeter** to secure our network zones.
-
 
 
 
