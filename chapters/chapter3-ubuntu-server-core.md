@@ -4,16 +4,30 @@
 > **Subject**: Linux Server Hardening & Service Hosting
 > **Objective**: Building the reliable workhorse of the lab.
 
-## 🟢 Introduction
+## Introduction
 
-**Ubuntu Server** is the industry standard for hosting web applications and security tools. In this chapter, we deploy a "Gold Template" that is hardened, updated, and ready for rapid deployment.
+## Introduction (The Workhorse)
 
-## 🚀 Deployment Protocol
+If pfSense is the Gatekeeper, **Ubuntu Server** is the **Employee** who actually does the work.
+
+This is the machine where you will host your tools (like hosting **The Lede** or running **ThreatScope**). 
+
+We use a "Gold Template" approach:
+1.  Build one perfect server.
+2.  Secure it.
+3.  Clone it whenever we need a new worker. No need to reinstall from scratch!
+
+## Deployment Protocol
 
 ### 1. VM Creation
 - **CPU**: 2 Cores.
 - **RAM**: 2GB-4GB.
-- **Network**: Bridge `vmbr1` (The pfSense Protected Zone).
+### 1. VM Creation
+- **CPU**: 2 Cores.
+- **RAM**: 2GB-4GB.
+- **Network**:
+  - **Proxmox**: Bridge `vmbr1` (The Protected Zone).
+  - **VirtualBox**: Network Adapter 1 -> **Internal Network** (`intnet` or `lab-network`).
 
 ### 2. Base Hardening
 Once installed, run the Seeker's hardening script (or these manual steps):
@@ -38,7 +52,7 @@ Once installed, run the Seeker's hardening script (or these manual steps):
    sudo ufw enable
    ```
 
-## 🛠️ Internal Service Stack
+## Internal Service Stack
 
 For hosting tools like a test version of **The Lede**, we use **Docker** for containerization:
 
@@ -49,7 +63,7 @@ sudo systemctl enable --now docker
 sudo usermod -aG docker ${USER}
 ```
 
-## 🎯 The Lab is Operational
+## The Lab is Operational
 
 Congratulations, Seeker. You now have a secure, virtualized environment to build, break, and test your tools.
 
@@ -57,3 +71,4 @@ Congratulations, Seeker. You now have a secure, virtualized environment to build
 - Integrate **ThreatScopeV2** to scan your internal pfSense networks.
 - Deploy a private instance of **The Lede** for secure internal communications.
 - Document every "Disaster" and "Rebuild" in your field notes.
+
